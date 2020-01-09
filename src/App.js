@@ -12,7 +12,7 @@ const store = createStore(allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && wi
 console.log(getMovies)
 
 function App() {
-  const no = false;
+
   return (
     <div className="App">
       <Provider store={store}>
@@ -22,7 +22,7 @@ function App() {
               <Link to="/">Connexion</Link>
             </span>
             <span>
-              <Link to="/coolchat">CoolChat</Link>
+              <Link to="/coolchat">Cool Chat</Link>
             </span>
           </nav>
 

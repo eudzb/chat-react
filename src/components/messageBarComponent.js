@@ -36,7 +36,8 @@ const MessageBarComponent = () => {
         onChange={handleChange} />
         <button
         type="submit"
-        className="buttonSend">Envoyer</button>
+        className="buttonSend">
+        <i className="material-icons dp48" style={{verticalAlign: 'sub'}}>send</i></button>
       </form>
     </div>
   );
