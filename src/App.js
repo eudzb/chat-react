@@ -1,24 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import getMovies from './exo1/getMovies'
+import ChatComponent from './components/chatComponent'
+import { createStore } from 'redux'
+import allReducers from './reducers'
+import { Provider } from 'react-redux'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import './App.css'
+import LoginComponent from './components/login';
+
+const store = createStore(allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+console.log(getMovies)
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Provider store={store}>
+        <Router>
+          <nav>
+            <span>
+              <Link to="/">Connexion</Link>
+            </span>
+            <span>
+              <Link to="/users">CoolChat</Link>
+            </span>
+          </nav>
+
+          <Switch>
+            <Route path="/users">
+              <ChatComponent />
+            </Route>
+
+
+            <Route path="/">
+              <LoginComponent />
+            </Route>
+          </Switch>
+        </Router>
+      </Provider>
     </div>
   );
 }

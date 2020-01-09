@@ -1,3 +1,153 @@
+html {
+  background: url('./img/background-site.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex: 1;
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 30px;
+  height: 50px;
+  align-items: center;
+}
+
+nav span {
+  margin: auto 12px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 200;
+}
+
+nav span a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.loginWindow {
+  width: 50rem;
+  height: 15rem;
+  background-color: rgb(0, 0, 0, 0.3);
+  margin: 5rem auto 0;
+  padding: 16px;
+  border-radius: 18px;
+}
+
+.loginWindow form {
+  margin: 32px 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.login-input {
+  padding: 14px;
+  font-size: 22px;
+  border-radius: 10px 0 0 10px;
+  font-weight: 300;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border: 2px solid #fff;
+  text-align: center;
+  color: #fff;
+}
+
+.loginWindow button {
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+  color: #000;
+  transition: ease 0.5s;
+}
+
+.loginWindow button:hover {
+  color: #408C4E;
+}
+
+.loginWindow button:focus {
+  outline: none;
+}
+
+.login-input::placeholder {
+  color: #fff;
+}
+
+.chatWindow {
+  background-color: rgb(0, 0, 0, 0.3);
+  margin: 5rem auto 0;
+  width: 50rem;
+  height: 35rem;
+  border-radius: 18px;
+  padding: 16px;
+  display: "flex";
+  flex-direction: "column";
+}
+
+.chatWindow h1,
+.loginWindow h1 {
+  text-align: left;
+  margin: 20px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.chat-message {
+  margin-bottom: 15px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 6px 0px 0px 0px #f7e4c4;
+}
+
+.img-avatar {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 45%;
+}
+
+.inputSend {
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  padding: 10px;
+  margin-right: 10px;
+  flex-grow: 8;
+}
+
+.inputSend:focus,
+.buttonSend:focus {
+  outline: none;
+}
+
+.buttonSend {
+  border-radius: 10px;
+  cursor: 'pointer';
+  font-size: 20px;
+  color: #fff;
+  font-weight: 'bold';
+  padding: 10px;
+  flex-grow: 1;
+  border: none;
+  background-color: #72B67F;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.buttonSend:hover {
+  background-color: #408C4E;
+}
+
 .App {
   text-align: center;
 }
