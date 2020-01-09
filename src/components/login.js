@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import '../App.css'
 import { useDispatch } from 'react-redux'
 import addAccount from '../actions/addAccount'
+import { useHistory } from "react-router-dom";
 
 const LoginComponent = () => {
+  let history = useHistory();
 
   const [username, setUsername] = useState('');
   const dispatch = useDispatch();
@@ -18,6 +20,7 @@ const LoginComponent = () => {
     if (username) {
       dispatch(addAccount({username: username}));
       setUsername('');
+      history.push("/coolchat");
     }
   }
 
@@ -26,7 +29,7 @@ const LoginComponent = () => {
     <div className="loginWindow">
       <h1>
         <span role="img" aria-label="sun" style={{fontSize: 50, verticalAlign: 'sub', marginRight: 10}}>🥑</span>
-        <span>Connectez-vous</span>
+        <span>Entrez votre username</span>
       </h1>
       <form onSubmit={handleSubmit}>
         <input

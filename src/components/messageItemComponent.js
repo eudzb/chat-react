@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 
-class MessageListComponent extends React.Component {
+class MessageItemComponent extends React.Component {
 
   render() {
     return (
@@ -22,4 +22,4 @@ class MessageListComponent extends React.Component {
   }
 };
 
-export default MessageListComponent;
+export default MessageItemComponent;

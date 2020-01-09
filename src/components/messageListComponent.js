@@ -10,13 +10,20 @@ const style = {
 };
 
 const MessageListComponent = () => {
-
   const messages = useSelector(state => state.messages.messages)
-  return (
-    <ul style={style}>
-      { messages.map((el, id) => <MessageItemComponent Message={el} key={id} />)}
-    </ul>
-  );
+
+
+  if (messages.length !== 0 || typeof messages !== undefined) {
+    return (
+      <ul style={style}>
+        { messages.map((el, id) => <MessageItemComponent Message={el} key={id} />)}
+      </ul>
+    );    
+  } else {
+    return (
+      <p>Y a pas de panneau !</p>
+    );    
+  }
 }
 
 export default MessageListComponent;
