@@ -1,15 +1,21 @@
 import React from 'react';
 import getMovies from './exo1/getMovies'
 import ChatComponent from './components/chatComponent'
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import allReducers from './reducers'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import './App.css'
 import LoginComponent from './components/login';
+import logger from './services/middleware'
 
-const store = createStore(allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 console.log(getMovies)
+
+const store = createStore(
+  allReducers, 
+  applyMiddleware(logger),
+  // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  );
 
 function App() {
 

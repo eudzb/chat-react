@@ -1,5 +1,6 @@
 const addMessage = (message) => {
     const date = new Date()
+    
     return {
         type: 'ADD_MESSAGE',
         message: message.message,

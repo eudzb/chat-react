@@ -13,8 +13,8 @@ const MessageBarComponent = () => {
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-
+    e.preventDefault();    
+    
     if (message) {
       dispatch(addMessage({message: message}));
       setMessage('');
