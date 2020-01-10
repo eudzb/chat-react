@@ -34,7 +34,7 @@ const LoginComponent = () => {
       <form onSubmit={handleSubmit}>
         <input
         type="text"
-        placeholder="Username"
+        placeholder="e.g: Avocado"
         className="login-input"
         value={username}
         onChange={handleChange} />
