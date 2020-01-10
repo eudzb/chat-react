@@ -17,7 +17,8 @@ const store = createStore(
   // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
   );
 
-function App() {
+const App = () => {
+  console.log(logger)
 
   return (
     <div className="App">
@@ -29,15 +30,13 @@ function App() {
             </span>
             <span>
               <Link to="/coolchat">Cool Chat</Link>
-            </span>
+            </span>            
           </nav>
 
           <Switch>
             <Route path="/coolchat">
               <ChatComponent />
             </Route>
-
-
             <Route path="/">
               <LoginComponent />
             </Route>
