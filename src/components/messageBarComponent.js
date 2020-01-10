@@ -24,7 +24,7 @@ const MessageBarComponent = () => {
   return (
     <div style={{ display: 'flex', padding: 10 }}>
       <img
-      src={require('../img/pic5.png')}
+      src={require('../img/icon-person.png')}
       style={{ width: 40, height: 40, objectFit: 'cover', borderRadius: 40/2, marginRight: 10}}
       alt="Your avatar"/>
       <form style={{display: "flex", flex: 1}} onSubmit={handleSubmit}>

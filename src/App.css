@@ -24,7 +24,42 @@ nav span {
 nav span a {
   text-decoration: none;
   color: #fff;
+  position: relative;
 }
+
+nav span a:after {
+  position: absolute;
+  content: '';
+  border-bottom: 6px ridge rgb(254, 254, 252, .7);
+  width: 40%;
+  transform: translateX(-50%);
+  bottom: -15px;
+  left: 50%;
+  cursor: initial;
+  transition: ease 0.5s;
+}
+
+nav span a:hover:after {
+  width: 100%;
+}
+
+ul {
+  padding: 12px;
+  list-style: none;
+  height: 350px;
+  overflow: scroll;
+  border-bottom: 1px solid #fff;
+}
+
+.no-msg {
+  height: 350px;
+  padding: 12px;
+  color: #fff;
+  font-style: italic;
+  margin: 16px 0;
+  border-bottom: 1px solid #fff;
+}
+
 
 .loginWindow {
   max-width: 50rem;
