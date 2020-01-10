@@ -18,7 +18,6 @@ const store = createStore(
   );
 
 const App = () => {
-  console.log(logger)
 
   return (
     <div className="App">

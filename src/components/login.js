@@ -27,9 +27,8 @@ const LoginComponent = () => {
 
   return (
     <div className="loginWindow">
-      <h1>
+      <h1 style={{textAlign: 'center'}}>
         <span role="img" aria-label="sun" style={{fontSize: 50, verticalAlign: 'sub', marginRight: 10}}>🥑</span>
-        {/* <i class="material-icons dp48" style={{verticalAlign: 'sub', fontSize: 'larger', marginRight: 10}}>person</i> */}
         <span>Entrez votre username</span>
       </h1>
       <form onSubmit={handleSubmit}>

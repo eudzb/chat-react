@@ -8,7 +8,7 @@ const ChatComponent = () => {
   return (
     <div className="chatWindow">
       <h1>
-        <span role="img" aria-label="sun" style={{fontSize: 50, verticalAlign: 'sub', marginRight: 10}}>☀️</span>
+        <span role="img" aria-label="sun" style={{fontSize: 40, marginRight: 10}}>🌙</span>
         <span>Cool Chat</span>
       </h1>
       <MessageListComponent />
