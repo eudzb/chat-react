@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import '../App.css'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import addMessage from '../actions/addMessage'
 
 const MessageBarComponent = () => {
 
   const [message, setMessage] = useState('');
   const dispatch = useDispatch();
+  const actualUser = useSelector(state => state.accounts.accounts.slice(-1)[0])
 
   const handleChange = (e) => {
     setMessage(e.target.value);
@@ -16,7 +17,7 @@ const MessageBarComponent = () => {
     e.preventDefault();    
     
     if (message) {
-      dispatch(addMessage({message: message}));
+      dispatch(addMessage({message: message}, actualUser.accounts));
       setMessage('');
     }
   }

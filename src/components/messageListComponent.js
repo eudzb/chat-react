@@ -5,6 +5,7 @@ import '../App.css'
 
 const MessageListComponent = () => {
   const messages = useSelector(state => state.messages.messages)
+  
   if (messages.length !== 0) {
     return (
       <ul>

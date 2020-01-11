@@ -15,7 +15,9 @@ const store = createStore(
   allReducers, 
   applyMiddleware(logger),
   // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-  );
+);
+
+console.log('Users : ', store.getState().accounts.accounts.length)
 
 const App = () => {
 
@@ -27,9 +29,9 @@ const App = () => {
             <span>
               <Link to="/">Connexion</Link>
             </span>
-            <span>
-              <Link to="/coolchat">Cool Chat</Link>
-            </span>            
+              <span>
+                <Link to="/coolchat">Cool Chat</Link>
+              </span>
           </nav>
 
           <Switch>
