@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import '../App.css'
 import { useDispatch, useSelector } from 'react-redux'
 import addMessage from '../actions/addMessage'
+import styled from 'styled-components';
+
+const BarMessage = styled.div`
+  display: flex;
+  padding: 10px;
+`;
 
 const MessageBarComponent = () => {
 
@@ -23,7 +29,7 @@ const MessageBarComponent = () => {
   }
 
   return (
-    <div style={{ display: 'flex', padding: 10 }}>
+    <BarMessage>
       <img
       src={require('../img/icon-person.png')}
       style={{ width: 40, height: 40, objectFit: 'cover', borderRadius: 40/2, marginRight: 10}}
@@ -40,7 +46,7 @@ const MessageBarComponent = () => {
         className="buttonSend">
         <i className="material-icons dp48" style={{verticalAlign: 'sub'}}>send</i></button>
       </form>
-    </div>
+    </BarMessage>
   );
 }
 

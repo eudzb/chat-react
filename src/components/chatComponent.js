@@ -17,6 +17,7 @@ const ChatComponent = () => {
         </span>
       </h1>
       <MessageListComponent />
+      <div style={{ float:"left", clear: "both" }}></div>
       <MessageBarComponent />
     </div>
   )    
