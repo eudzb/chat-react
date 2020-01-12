@@ -23,8 +23,10 @@ const Routes = () => {
 
           <Switch>
             <Route path="/coolchat">
-              <ChatComponent />
-            </Route>
+            { nbAccount !== 0 ?
+                <ChatComponent /> : <LoginComponent />
+            }
+                </Route>
             <Route path="/">
               <LoginComponent />
             </Route>

@@ -21,7 +21,7 @@ const Footer = styled.footer`
   bottom: 0;
   font-size: 12px;
   color: lightgrey;
-  padding: 15px;
+  padding: 25px;
   font-weight: 300;
   text-align: center;
   width: 100%;
