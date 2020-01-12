@@ -19,6 +19,7 @@ const LoginComponent = () => {
     
     if (username) {
       dispatch(addAccount({username: username}));
+      console.log(username)
       setUsername('');
       history.push("/coolchat");
     }
@@ -37,6 +38,7 @@ const LoginComponent = () => {
         placeholder="e.g: Avocado"
         className="login-input"
         value={username}
+        pattern="[^\s]+"
         onChange={handleChange} />
         <button type="submit">OK</button>
       </form>
