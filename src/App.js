@@ -18,14 +18,17 @@ const store = createStore(
 
 const Footer = styled.footer`
   position: absolute;
+  left: 50%;
   bottom: 0;
+`
+const CenteredFooter = styled.footer`
   font-size: 12px;
   color: lightgrey;
   padding: 25px;
   font-weight: 300;
-  text-align: center;
-  width: 100%;
   text-decoration: none;
+  position: relative;
+  left: -50%;
 `
 
 const App = () => {
@@ -34,13 +37,15 @@ const App = () => {
     <div className="App">
       <Provider store={store}>
         <Routes />
-        <Footer>
+      </Provider>
+      <Footer>
+        <CenteredFooter>
           <span>© 2020 </span>
           <a href="https://github.com/eudzb/chat-react" target="blank" style={{textDecoration: 'none', color: 'inherit'}}>
             github.com/eudzb/chat-react
           </a>
-        </Footer>
-      </Provider>
+        </CenteredFooter>
+      </Footer>
     </div>
   );
 }
