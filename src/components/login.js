@@ -19,7 +19,6 @@ const LoginComponent = () => {
     
     if (username) {
       dispatch(addAccount({username: username}));
-      console.log(username)
       setUsername('');
       history.push("/coolchat");
     }
